@@ -6,11 +6,10 @@ import schema from './schema';
 
 import products from '@data/data'
 
-const getProductsList: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
+const getProductsList: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async () => {
   return formatJSONResponse({
-    message: `AWS Lambda function - getProductsList`,
+    message: `Successfully!`,
     products,
-    event
   });
 };
 
