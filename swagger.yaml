@@ -7,6 +7,8 @@ info:
 servers:
 - url: https://virtserver.swaggerhub.com/Shodlik-Shomuratov/ShopService/1.0.0
   description: SwaggerHub API Auto Mocking
+- url: https://yeasirhhk2.execute-api.ap-southeast-1.amazonaws.com/dev
+  description: Product Service
 tags:
 - name: Products
   description: Get all products and get products by id
@@ -17,39 +19,9 @@ paths:
       - Products
       summary: Get all products
       operationId: Get all products
-      parameters:
-      - name: searchString
-        in: query
-        description: pass an optional search string for looking up inventory
-        required: false
-        style: form
-        explode: true
-        schema:
-          type: string
-      - name: skip
-        in: query
-        description: number of records to skip for pagination
-        required: false
-        style: form
-        explode: true
-        schema:
-          minimum: 0
-          type: integer
-          format: int32
-      - name: limit
-        in: query
-        description: maximum number of records to return
-        required: false
-        style: form
-        explode: true
-        schema:
-          maximum: 50
-          minimum: 0
-          type: integer
-          format: int32
       responses:
         "200":
-          description: search results matching criteria
+          description: All products
           content:
             application/json:
               schema:
