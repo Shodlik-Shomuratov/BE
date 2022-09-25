@@ -1,0 +1,101 @@
+---
+openapi: 3.0.0
+info:
+  title: Shop Service API
+  description: This is a simple API
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/Shodlik-Shomuratov/ShopService/1.0.0
+  description: SwaggerHub API Auto Mocking
+tags:
+- name: Products
+  description: Get all products and get products by id
+paths:
+  /products:
+    get:
+      tags:
+      - Products
+      summary: Get all products
+      operationId: Get all products
+      parameters:
+      - name: searchString
+        in: query
+        description: pass an optional search string for looking up inventory
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: skip
+        in: query
+        description: number of records to skip for pagination
+        required: false
+        style: form
+        explode: true
+        schema:
+          minimum: 0
+          type: integer
+          format: int32
+      - name: limit
+        in: query
+        description: maximum number of records to return
+        required: false
+        style: form
+        explode: true
+        schema:
+          maximum: 50
+          minimum: 0
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Products'
+  /products/{productId}:
+    get:
+      tags:
+      - Products
+      summary: Get all products
+      operationId: Get single products
+      parameters:
+      - name: productId
+        in: path
+        description: Product Id
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Products'
+components:
+  schemas:
+    Products:
+      required:
+      - id
+      type: object
+      properties:
+        id:
+          type: number
+          example: 1
+        title:
+          type: string
+          example: Product One
+        description:
+          type: string
+          example: New product
+        price:
+          type: number
+          example: 1000

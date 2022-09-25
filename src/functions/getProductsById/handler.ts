@@ -8,12 +8,14 @@ import products from '@data/data'
 const getProductsById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
 
   const productId = event.pathParameters.productId
-  const product = products.find(product => product.id === productId)
+  const product = products.find(product => product.id === Number(productId))
 
   if (!product) {
     return formatJSONResponse({
       message: `Product not found!`,
-      productId
+      products,
+      productId,
+      product
     });
   }
 
