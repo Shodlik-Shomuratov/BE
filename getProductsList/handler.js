@@ -1,4 +1,3 @@
-// const data = require("../data.json")
 import data from '../data.json'
 
 export const handler = async event => {
