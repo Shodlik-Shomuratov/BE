@@ -13,9 +13,7 @@ plugins:
 custom:
   esbuild:
     config: './esbuild.config.js'
-  autoswagger:
-    basePath: '/dev'
-    host: 'm3a8z91udj.execute-api.eu-north-1.amazonaws.com'
+  # documentation: ${file(./swagger.yml)}
 
 functions:
   getProductsList:
