@@ -1,0 +1,72 @@
+[
+    {
+        "id": {
+            "S": "luxury-watch"
+        },
+        "title": {
+            "S": "Luxury watch"
+        },
+        "price": {
+            "N": "999"
+        },
+        "description": {
+            "S": "Luxury watch description"
+        }
+    },
+    {
+        "id": {
+            "S": "comfortable-sneakers"
+        },
+        "title": {
+            "S": "Comfortable sneakers"
+        },
+        "price": {
+            "N": "149"
+        },
+        "description": {
+            "S": "Comfortable sneakers description"
+        }
+    },
+    {
+        "id": {
+            "S": "stylish-chair"
+        },
+        "title": {
+            "S": "Stylish armchair"
+        },
+        "price": {
+            "N": "499"
+        },
+        "description": {
+            "S": "Stylish armchair description"
+        }
+    },
+    {
+        "id": {
+            "S": "fashion-product"
+        },
+        "title": {
+            "S": "Fashion product"
+        },
+        "price": {
+            "N": "5"
+        },
+        "description": {
+            "S": "Fashion product description"
+        }
+    },
+    {
+        "id": {
+            "S": "best-gift-ever"
+        },
+        "title": {
+            "S": "Best gift ever"
+        },
+        "price": {
+            "N": "99"
+        },
+        "description": {
+            "S": "Best gift ever description"
+        }
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "product_id": {
+            "S": "luxury-watch"
+        },
+        "count": {
+            "N": "10"
+        }
+    },
+    {
+        "product_id": {
+            "S": "comfortable-sneakers"
+        },
+        "count": {
+            "N": "20"
+        }
+    },
+    {
+        "product_id": {
+            "S": "stylish-chair"
+        },
+        "count": {
+            "N": "30"
+        }
+    },
+    {
+        "product_id": {
+            "S": "fashion-product"
+        },
+        "count": {
+            "N": "50"
+        }
+    },
+    {
+        "product_id": {
+            "S": "best-gift-ever"
+        },
+        "count": {
+            "N": "40"
+        }
+    }
+]
