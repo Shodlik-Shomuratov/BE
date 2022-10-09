@@ -6,6 +6,7 @@ import { products } from '../../utils/data/products';
 
 
 
+
 export const getProductsById: ValidatedEventAPIGatewayProxyEvent<void> = async (event) => {
 
   const productId = event.pathParameters.productId
